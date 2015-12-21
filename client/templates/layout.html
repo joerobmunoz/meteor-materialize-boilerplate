@@ -1,0 +1,23 @@
+<template name="layout">  
+ 	{{> Template.dynamic template=top}}
+	{{> Template.dynamic template=main}}
+</template>
+
+<template name="dashboard_layout">  
+  {{> Template.dynamic template=top}}
+  <div id="main">
+  {{> Template.dynamic template=side}}
+  <div id="dashboard_content">
+    <div class="container dashboard_container">
+      {{> Template.dynamic template=main}}
+    </div>
+  </div>
+  </div>
+</template>
+
+<template name="user_form_layout">
+	{{> Template.dynamic template=top}}
+  <div id="accounts_main" class="blue darken-2">
+    {{> Template.dynamic template=main}}
+  </div>
+</template>

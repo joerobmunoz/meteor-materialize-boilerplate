@@ -1,0 +1,42 @@
+<template name="sample_pane">
+{{> sample_add}}
+{{> sample_grid}}
+</template>
+
+<template name="sample_grid">
+<ul class="collection">
+  {{#each samples}}
+  	<li class="collection-item truncate">{{first}} {{last}}
+        <a href="#!" class="secondary-content delete_sample"><i class="material-icons">delete</i></a>
+      </li>
+  {{/each}}
+</ul>
+</template>
+
+<template name="sample_add">
+<form class="new_sample_form col s12">
+  <div class="row">
+    <div class="input-field col s12 m4">
+      <input id="first_name" type="text" class="validate">
+      <label for="first_name">First Name</label>
+    </div>
+    <div class="input-field col s12 m4">
+      <input id="last_name" type="text" class="validate">
+      <label for="last_name">Last Name</label>
+    </div>
+    <div class="valign col s12 m2">
+	    <div>
+	      <input name="gender_radio" type="radio" id="m_radio" checked />
+	      <label for="m_radio">Male</label>
+	    </div>
+	    <div>
+	      <input name="gender_radio" type="radio" id="f_radio" />
+	      <label for="f_radio">Female</label>
+	    </div>
+    </div>
+    <div class="col s12 m1">
+    	<button class="btn btn-floating btn-large waves-effect waves-light red" type="submit"><i class="material-icons">add</i></button>
+    </div>
+  </div>
+</form>
+</template>

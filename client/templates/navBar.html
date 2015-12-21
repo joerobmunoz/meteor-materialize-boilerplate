@@ -1,0 +1,46 @@
+<template name="nav_bar">
+<div>
+	<ul id="dropdown-who" class="dropdown-content">
+	    <li><a class="waves-effect waves-dark" href="/login">Login</a></li>
+	    <li><a class="waves-effect waves-dark" href="/register">Sign Up</a></li>
+	</ul>
+	<nav class="blue darken-2">
+		<div class="nav-wrapper">
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+		    	<li><a href="/">About</a></li>
+		    	{{#if userName}}
+		    		<li><a id="logout" class="waves-effect waves-dark" href="/">{{ userName }}</a></li>
+		    	{{/if}}
+		    	<li><a class="dropdown-button" href="#!" data-activates="dropdown-who" data-hover="true" data-beloworigin="true"><i class="material-icons">perm_identity</i></a></li>
+		    </ul>
+			<ul id="slide-out" class="side-nav">
+			    <li><a class="waves-effect waves-dark" href="/login">Login</a></li>
+			    <li><a class="waves-effect waves-dark" href="/register">Sign Up</a></li>
+			    <li><a href="/">About Us</a></li>
+			</ul>
+			<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+		</div>
+	</nav>
+</div>
+</template>
+
+<template name="logged_in_nav_bar">
+<div>
+	<nav class="blue darken-2">
+		<div class="nav-wrapper">
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+		    	<li><a class="waves-effect waves-dark" href="/">{{ userName }}</a></li>
+		    	<li><a id="logout" class="waves-effect waves-dark" href="/">Sign Out</a></li>
+		    </ul>
+			<ul id="slide-out" class="side-nav">
+		    	<!-- dashboard overflow -->
+		   	    <li><a href="/sample">Sample List</a></li>
+
+	    		<!-- admin -->
+	    		<li><a id="logout" class="waves-effect waves-dark" href="/">Sign Out</a></li>
+			</ul>
+			<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+		</div>
+	</nav>
+</div>
+</template>
