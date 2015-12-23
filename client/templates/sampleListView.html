@@ -6,9 +6,11 @@
 <template name="sample_grid">
 <ul class="collection">
   {{#each samples}}
+  <!-- "samples" are defined in the sampleHelper.js template helper. These expose the return value from the Samples Mongo collection. -->
   	<li class="collection-item truncate">{{first}} {{last}}
-        <a href="#!" class="secondary-content delete_sample"><i class="material-icons">delete</i></a>
-      </li>
+    <!-- each ".delete_sample" class binds to a click event in the sampleHelper.js -->
+      <a href="#!" class="secondary-content delete_sample"><i class="material-icons">delete</i></a>
+    </li>
   {{/each}}
 </ul>
 </template>

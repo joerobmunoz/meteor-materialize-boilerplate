@@ -3,6 +3,7 @@
 body {
 	background-color: #1976D2 !important;
 }
+
 .cursor_pointer {
 	cursor: 'pointer';
 }
@@ -14,13 +15,21 @@ body {
     margin-bottom: 50px;
 }
 
+.dashboard_container {
+	margin-top: 20px;
+}
+
+#dashboard_content {
+	padding-left: 240px;
+}
+
+#dashboard_side_nav {
+	margin-top: 64px !important;
+}
+
 /* Materialize tabs overrides */
 .tabs .tab a {
 	color: #1976d2 !important;
-}
-
-.dashboard_container {
-	margin-top: 20px;
 }
 
 #accounts_main .col {
@@ -33,14 +42,6 @@ body {
 }
 #at-btn:hover {
 	background-color: #90a4ae; /* blue-grey-lighten2 */
-}
-
-#dashboard_content {
-	padding-left: 240px;
-}
-
-#dashboard_side_nav {
-	margin-top: 64px !important;
 }
 
 /*side nav*/

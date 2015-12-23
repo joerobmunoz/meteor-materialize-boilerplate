@@ -1,4 +1,5 @@
 Template.user_form_layout.rendered = function() {
+    // On template change, the DOM body classes will reactivly change
     document.body.className = "blue darken-2";
 };
 
@@ -7,6 +8,7 @@ Template.dashboard_layout.rendered = function() {
 };
 
 var initializeNav = function() {
+    // Some template changes require jQuery plugin reinitialization
     $(".button-collapse").sideNav();
     $(".dropdown-button").dropdown();
 };
