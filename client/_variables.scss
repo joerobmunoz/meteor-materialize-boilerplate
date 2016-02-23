@@ -1,0 +1,17 @@
+@import ".meteor/local/build/programs/server/assets/packages/poetic_materialize-scss/bower_components/materialize/sass/components/_color.scss";
+@import ".meteor/local/build/programs/server/assets/packages/poetic_materialize-scss/bower_components/materialize/sass/materialize.scss";
+
+
+$primary-color: color("red") !default;
+
+/*1976D2*/
+
+$primary-color-light: false !default;
+$primary-color-dark: false !default;
+
+@if not $primary-color-light {
+    $primary-color-light: lighten($primary-color, 15%);
+}
+@if not $primary-color-dark {
+    $primary-color-dark: darken($primary-color, 15%);
+}
