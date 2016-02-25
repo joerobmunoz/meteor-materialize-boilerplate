@@ -1,7 +1,28 @@
-/* CSS declarations go here */
-@import ".meteor/local/build/programs/server/assets/packages/poetic_materialize-scss/bower_components/materialize/sass/components/_color.scss";
-@import ".meteor/local/build/programs/server/assets/packages/poetic_materialize-scss/bower_components/materialize/sass/materialize.scss";
-@import "{}/client/styles/_variables.scss";
+
+// If you want to override materialize sass variables you can uncomment the following:
+@import "{poetic:materialize-scss}/sass/components/_color.scss";
+$primary-color: color("blue", "darken-2");
+
+// import main scss file
+@import "{poetic:materialize-scss}/sass/materialize.scss";
+
+
+/*$primary-color: color("materialize-blue", "darken-2") !default;*/
+
+$primary-color-light: false !default;
+$primary-color-dark: false !default;
+@if not $primary-color-light {
+    $primary-color-light: lighten($primary-color, 15%);
+}
+@if not $primary-color-dark {
+    $primary-color-dark: darken($primary-color, 15%);
+}
+
+/*$secondary-color: color("teal", "lighten-1") !default;*/
+/*$success-color: color("green", "base") !default;*/
+/*$error-color: color("red", "base") !default;*/
+
+$link-color: color("light-blue", "darken-1") !default;
 
 .primary-color-text {
     color: $primary-color;

@@ -23,5 +23,6 @@ kadira:flow-router
 kadira:blaze-layout
 useraccounts:flow-routing
 useraccounts:materialize
+poetic:materialize-scss
+standard-minifiers
 fourseven:scss
-seba:minifiers-autoprefixer
