@@ -9,7 +9,7 @@ Template.dashboard_layout.rendered = function() {
 
 var initializeNav = function() {
     // Some template changes require jQuery plugin reinitialization
-    $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav({closeOnClick: true});
     $(".dropdown-button").dropdown();
 };
 
