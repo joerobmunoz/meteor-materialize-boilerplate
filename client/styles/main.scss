@@ -48,10 +48,8 @@ $link-color: color("light-blue", "darken-1") !default;
     background-color: $primary-color-light;
 }
 
-
-
 body {
-    background-color: #1976D2 !important;
+    background-color: $primary-color !important;
 }
 
 .cursor_pointer {
@@ -67,14 +65,6 @@ body {
 
 .dashboard_container {
     margin-top: 20px;
-}
-
-#dashboard_content {
-    padding-left: 240px;
-}
-
-#dashboard_side_nav {
-    margin-top: 64px !important;
 }
 
 /* Materialize tabs overrides */
@@ -94,17 +84,21 @@ body {
     background-color: #90a4ae; /* blue-grey-lighten2 */
 }
 
-/*side nav*/
-header, main, footer {
-    /*padding-left: 240px;*/
+#dashboard_side_nav {
+    margin-top: 64px !important;
+}
+
+/* respect side-nav width */
+.dashboard_content {
+    padding-left: 240px;
 }
 
 @media only screen and (max-width : 992px) {
-    header, main, footer {
-        /*padding-left: 0;*/
+    /* Collapse side nav when > med */
+    .dashboard_content {
+        padding-left: 0;
     }
 }
-
 
 /* valid color */
 input[type=text].valid,

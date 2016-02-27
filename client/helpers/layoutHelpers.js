@@ -11,6 +11,28 @@ var initializeNav = function() {
     // Some template changes require jQuery plugin reinitialization
     $(".button-collapse").sideNav();
     $(".dropdown-button").dropdown();
+
+    // Attach active tab click event
+    $("#dashboard_side_nav li").click(function() {
+        $("#dashboard_side_nav li ").each(function() {
+            $(this).removeClass("active");
+        });
+
+        if (!$(this).hasClass("active")) {
+            $(this).addClass("active");
+        }
+    });
+
+    // Set active side tab
+    $(function() {
+        var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/"));
+            $("#dashboard_side_nav li a").each(function() {
+                if($(this).attr("href") == pgurl) {
+                    $(this).parent().addClass("active");
+                }
+        });
+    });
+
 };
 
 Template.logged_in_nav_bar.helpers({
