@@ -24,28 +24,24 @@ $primary-color-dark: false !default;
 
 $link-color: color("light-blue", "darken-1") !default;
 
-.primary-color-text {
-    color: $primary-color;
-}
-
 .primary-color {
     background-color: $primary-color;
 }
-
-.primary-color-dark-text {
-    background-color: $primary-color-dark;
-}
-
 .primary-color-dark {
     background-color: $primary-color-dark;
 }
-
-.primary-color-light-text {
+.primary-color-light {
     background-color: $primary-color-light;
 }
 
-.primary-color-light {
-    background-color: $primary-color-light;
+.primary-color-text {
+    color: $primary-color;
+}
+.primary-color-dark-text {
+    color: $primary-color-dark;
+}
+.primary-color-light-text {
+    color: $primary-color-light;
 }
 
 body {
@@ -86,6 +82,10 @@ body {
 
 #dashboard_side_nav {
     margin-top: 64px !important;
+}
+
+#accounts_main .header {
+    color: $primary-color-dark;
 }
 
 /* respect side-nav width */

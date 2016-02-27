@@ -1,6 +1,6 @@
 Template.user_form_layout.rendered = function() {
     // On template change, the DOM body classes will reactivly change
-    document.body.className = "blue darken-2";
+    document.body.className = "primary-color";
 };
 
 Template.dashboard_layout.rendered = function() {
