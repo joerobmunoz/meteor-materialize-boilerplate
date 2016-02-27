@@ -16,7 +16,7 @@ var initializeNav = function() {
 Template.logged_in_nav_bar.helpers({
     'userName': function () {
     	var user = Meteor.user();
-      	return user !== null ? user.emails[0].address.split('@')[0] : null;
+      	return user && user.email !== "undefined" ? user.emails[0].address.split('@')[0] : null;
     }
 });
 

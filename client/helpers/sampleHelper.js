@@ -14,7 +14,7 @@ Template.sample_add.events({ // Add a document to the Sample collection
         isMale: male,
         createdAt: new Date() // current time
       });
- 
+
       // Clear form
       event.target[0].value = "";
       event.target[1].value = "";
